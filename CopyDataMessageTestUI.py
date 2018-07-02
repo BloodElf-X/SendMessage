@@ -1,0 +1,148 @@
+# -*- coding: utf-8 -*-
+
+# Form implementation generated from reading ui file 'CopyDataMessageTestUI.ui'
+#
+# Created by: PyQt4 UI code generator 4.11.4
+#
+# WARNING! All changes made in this file will be lost!
+
+from PyQt4 import QtCore, QtGui
+
+try:
+    _fromUtf8 = QtCore.QString.fromUtf8
+except AttributeError:
+    def _fromUtf8(s):
+        return s
+
+try:
+    _encoding = QtGui.QApplication.UnicodeUTF8
+    def _translate(context, text, disambig):
+        return QtGui.QApplication.translate(context, text, disambig, _encoding)
+except AttributeError:
+    def _translate(context, text, disambig):
+        return QtGui.QApplication.translate(context, text, disambig)
+
+class Ui_MainWindow(object):
+    def setupUi(self, MainWindow):
+        MainWindow.setObjectName(_fromUtf8("MainWindow"))
+        MainWindow.resize(1003, 649)
+        self.centralwidget = QtGui.QWidget(MainWindow)
+        self.centralwidget.setObjectName(_fromUtf8("centralwidget"))
+        self.gridLayout_3 = QtGui.QGridLayout(self.centralwidget)
+        self.gridLayout_3.setObjectName(_fromUtf8("gridLayout_3"))
+        self.tabMsg = QtGui.QTabWidget(self.centralwidget)
+        self.tabMsg.setObjectName(_fromUtf8("tabMsg"))
+        self.tabSendMsg = QtGui.QWidget()
+        self.tabSendMsg.setObjectName(_fromUtf8("tabSendMsg"))
+        self.gridLayout_2 = QtGui.QGridLayout(self.tabSendMsg)
+        self.gridLayout_2.setObjectName(_fromUtf8("gridLayout_2"))
+        self.groupBox = QtGui.QGroupBox(self.tabSendMsg)
+        self.groupBox.setObjectName(_fromUtf8("groupBox"))
+        self.gridLayout = QtGui.QGridLayout(self.groupBox)
+        self.gridLayout.setObjectName(_fromUtf8("gridLayout"))
+        self.verticalLayout = QtGui.QVBoxLayout()
+        self.verticalLayout.setObjectName(_fromUtf8("verticalLayout"))
+        self.label_2 = QtGui.QLabel(self.groupBox)
+        sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Minimum, QtGui.QSizePolicy.Minimum)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.label_2.sizePolicy().hasHeightForWidth())
+        self.label_2.setSizePolicy(sizePolicy)
+        self.label_2.setObjectName(_fromUtf8("label_2"))
+        self.verticalLayout.addWidget(self.label_2)
+        spacerItem = QtGui.QSpacerItem(20, 40, QtGui.QSizePolicy.Minimum, QtGui.QSizePolicy.Expanding)
+        self.verticalLayout.addItem(spacerItem)
+        self.gridLayout.addLayout(self.verticalLayout, 1, 0, 1, 1)
+        self.horizontalLayout = QtGui.QHBoxLayout()
+        self.horizontalLayout.setObjectName(_fromUtf8("horizontalLayout"))
+        self.label = QtGui.QLabel(self.groupBox)
+        sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Fixed, QtGui.QSizePolicy.Minimum)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.label.sizePolicy().hasHeightForWidth())
+        self.label.setSizePolicy(sizePolicy)
+        self.label.setObjectName(_fromUtf8("label"))
+        self.horizontalLayout.addWidget(self.label)
+        self.com_win_name_list = QtGui.QComboBox(self.groupBox)
+        self.com_win_name_list.setEditable(True)
+        self.com_win_name_list.setObjectName(_fromUtf8("com_win_name_list"))
+        self.horizontalLayout.addWidget(self.com_win_name_list)
+        self.button_refresh_win_list = QtGui.QPushButton(self.groupBox)
+        sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Fixed, QtGui.QSizePolicy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.button_refresh_win_list.sizePolicy().hasHeightForWidth())
+        self.button_refresh_win_list.setSizePolicy(sizePolicy)
+        self.button_refresh_win_list.setObjectName(_fromUtf8("button_refresh_win_list"))
+        self.horizontalLayout.addWidget(self.button_refresh_win_list)
+        self.gridLayout.addLayout(self.horizontalLayout, 0, 0, 1, 2)
+        self.pedit_message_content = QtGui.QPlainTextEdit(self.groupBox)
+        sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Expanding, QtGui.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.pedit_message_content.sizePolicy().hasHeightForWidth())
+        self.pedit_message_content.setSizePolicy(sizePolicy)
+        self.pedit_message_content.setObjectName(_fromUtf8("pedit_message_content"))
+        self.gridLayout.addWidget(self.pedit_message_content, 1, 1, 1, 1)
+        self.gridLayout_2.addWidget(self.groupBox, 0, 0, 1, 1)
+        self.horizontalLayout_3 = QtGui.QHBoxLayout()
+        self.horizontalLayout_3.setObjectName(_fromUtf8("horizontalLayout_3"))
+        spacerItem1 = QtGui.QSpacerItem(40, 20, QtGui.QSizePolicy.Expanding, QtGui.QSizePolicy.Minimum)
+        self.horizontalLayout_3.addItem(spacerItem1)
+        self.button_send_message = QtGui.QPushButton(self.tabSendMsg)
+        self.button_send_message.setObjectName(_fromUtf8("button_send_message"))
+        self.horizontalLayout_3.addWidget(self.button_send_message)
+        self.gridLayout_2.addLayout(self.horizontalLayout_3, 1, 0, 1, 1)
+        self.tabMsg.addTab(self.tabSendMsg, _fromUtf8(""))
+        self.tabGetMsg = QtGui.QWidget()
+        self.tabGetMsg.setObjectName(_fromUtf8("tabGetMsg"))
+        self.verticalLayout_3 = QtGui.QVBoxLayout(self.tabGetMsg)
+        self.verticalLayout_3.setObjectName(_fromUtf8("verticalLayout_3"))
+        self.horizontalLayout_2 = QtGui.QHBoxLayout()
+        self.horizontalLayout_2.setObjectName(_fromUtf8("horizontalLayout_2"))
+        self.label_3 = QtGui.QLabel(self.tabGetMsg)
+        self.label_3.setObjectName(_fromUtf8("label_3"))
+        self.horizontalLayout_2.addWidget(self.label_3)
+        self.editWndHandle = QtGui.QLineEdit(self.tabGetMsg)
+        self.editWndHandle.setReadOnly(True)
+        self.editWndHandle.setObjectName(_fromUtf8("editWndHandle"))
+        self.horizontalLayout_2.addWidget(self.editWndHandle)
+        spacerItem2 = QtGui.QSpacerItem(40, 20, QtGui.QSizePolicy.Expanding, QtGui.QSizePolicy.Minimum)
+        self.horizontalLayout_2.addItem(spacerItem2)
+        self.verticalLayout_3.addLayout(self.horizontalLayout_2)
+        self.groupBox_2 = QtGui.QGroupBox(self.tabGetMsg)
+        self.groupBox_2.setObjectName(_fromUtf8("groupBox_2"))
+        self.verticalLayout_2 = QtGui.QVBoxLayout(self.groupBox_2)
+        self.verticalLayout_2.setObjectName(_fromUtf8("verticalLayout_2"))
+        self.pTextMsgContent = QtGui.QPlainTextEdit(self.groupBox_2)
+        self.pTextMsgContent.setReadOnly(False)
+        self.pTextMsgContent.setObjectName(_fromUtf8("pTextMsgContent"))
+        self.verticalLayout_2.addWidget(self.pTextMsgContent)
+        self.verticalLayout_3.addWidget(self.groupBox_2)
+        self.tabMsg.addTab(self.tabGetMsg, _fromUtf8(""))
+        self.gridLayout_3.addWidget(self.tabMsg, 0, 0, 1, 1)
+        MainWindow.setCentralWidget(self.centralwidget)
+        self.menubar = QtGui.QMenuBar(MainWindow)
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 1003, 34))
+        self.menubar.setObjectName(_fromUtf8("menubar"))
+        MainWindow.setMenuBar(self.menubar)
+        self.statusbar = QtGui.QStatusBar(MainWindow)
+        self.statusbar.setObjectName(_fromUtf8("statusbar"))
+        MainWindow.setStatusBar(self.statusbar)
+
+        self.retranslateUi(MainWindow)
+        self.tabMsg.setCurrentIndex(0)
+        QtCore.QMetaObject.connectSlotsByName(MainWindow)
+
+    def retranslateUi(self, MainWindow):
+        MainWindow.setWindowTitle(_translate("MainWindow", "CopyData消息测试工具", None))
+        self.groupBox.setTitle(_translate("MainWindow", "COPYDATA消息配置", None))
+        self.label_2.setText(_translate("MainWindow", "消息内容：", None))
+        self.label.setText(_translate("MainWindow", "窗口名称：", None))
+        self.button_refresh_win_list.setText(_translate("MainWindow", "刷新窗口列表", None))
+        self.button_send_message.setText(_translate("MainWindow", "发送消息", None))
+        self.tabMsg.setTabText(self.tabMsg.indexOf(self.tabSendMsg), _translate("MainWindow", "发送消息", None))
+        self.label_3.setText(_translate("MainWindow", "窗口句柄:", None))
+        self.groupBox_2.setTitle(_translate("MainWindow", "接收消息内容：", None))
+        self.tabMsg.setTabText(self.tabMsg.indexOf(self.tabGetMsg), _translate("MainWindow", "接收消息", None))
+
