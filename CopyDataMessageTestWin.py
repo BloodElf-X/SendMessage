@@ -77,7 +77,7 @@ class SendMessageTest(QtGui.QMainWindow, Ui_MainWindow):
                                            QtGui.QMessageBox.Close)
         except Exception, error:
             QtGui.QMessageBox.critical(None, u'错误信息',
-                                       error,
+                                       unicode(error),
                                        QtGui.QMessageBox.Close)
 
     def handle_window(self, hwnd, extra):
@@ -88,7 +88,8 @@ class SendMessageTest(QtGui.QMainWindow, Ui_MainWindow):
                 if self.win_name == a:
                     self.is_find_win = True
                     sender_hwnd = 0
-                    buf = ctypes.create_unicode_buffer(self.message_content)
+                    str_temp = self.message_content.encode("gb2312")
+                    buf = ctypes.create_string_buffer(str_temp)
 
                     copydata = COPYDATASTRUCT()
                     copydata.dwData = 0
@@ -101,7 +102,7 @@ class SendMessageTest(QtGui.QMainWindow, Ui_MainWindow):
                                                       ctypes.byref(copydata))
         except Exception, error:
             QtGui.QMessageBox.critical(None, u'错误信息',
-                                       error,
+                                       unicode(error),
                                        QtGui.QMessageBox.Close)
 
     def tab_change(self, index):
@@ -113,7 +114,8 @@ class SendMessageTest(QtGui.QMainWindow, Ui_MainWindow):
         for msg in args:
             if msg.message == win32con.WM_COPYDATA:
                 pCDS = ctypes.cast(msg.lParam, PCOPYDATASTRUCT)
-                msg_content = ctypes.wstring_at(pCDS.contents.lpData)
+                msg_content = ctypes.string_at(pCDS.contents.lpData)
+                msg_content = unicode(msg_content, 'gb2312')
                 self.pTextMsgContent.setPlainText(msg_content)
 
         return super(SendMessageTest, self).winEvent(*args, **kwargs)
